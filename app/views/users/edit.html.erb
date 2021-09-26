@@ -1,0 +1,13 @@
+<h1>User info</h1>
+<%= form_with model: @user do |form| %>
+<%= render 'books/error', model: @user %>
+  <div class="user-name">Name</div>
+    <%= form.text_field :name %>
+  <div class="user-edit-image">Image</div>
+    <%= form.attachment_field :profile_image %>
+  <div class="form-body">Introduction</div>
+    <%= form.text_area :introduction %><br>
+  <div class="upload">
+    <%= form.submit " Update User" %>
+  </div>
+<% end %>
